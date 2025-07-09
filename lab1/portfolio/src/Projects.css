@@ -1,0 +1,103 @@
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section > * {
+  max-width: 100%;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+#projects {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+}
+
+#projects h2 {
+  color: #328072;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  border-left: 6px solid #328072;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Responsive Grid Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.col {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.card {
+  background-color: #f4f2f2;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 20px rgba(100, 99, 99, 0.4);
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 35px rgba(153, 108, 60, 0.5);
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+.card-title {
+  color: #9f820f;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.card-text {
+  color: #a29177;
+  font-size: 1rem;
+}
+
+.btn-project {
+  background: transparent;
+  border: 2px solid #b3a083;
+  color: #b3a083;
+  padding: 10px 25px;
+  margin-top: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-project:hover {
+  background: #87560d;
+  color: #fff;
+}
