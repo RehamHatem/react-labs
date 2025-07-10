@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #ffd900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.navbar-left {
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.watchlist {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+  cursor: pointer;
+}
+
+.heart-icon {
+  color: black;
+}
