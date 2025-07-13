@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../Movies.css';
 import { FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 function Movies({ searchTerm }) {
   const [movies, setMovies] = useState([]);
@@ -34,6 +36,7 @@ function Movies({ searchTerm }) {
   );
 
   return (
+    
     <div className="popular-movies">
       <h2>Popular Movies</h2>
       {loading && !error && <p style={{ padding: '1rem', color:'black' }}>Loading movies...</p>}
@@ -42,6 +45,7 @@ function Movies({ searchTerm }) {
         <div className="movie-list">
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
+            <Link to={`/movie/${movie.id}`} style={{ textDecoration: 'none' }}>
             <div key={movie.id} className="movie-card">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -55,6 +59,7 @@ function Movies({ searchTerm }) {
                 <FaRegHeart />
               </div>
             </div>
+            </Link>
           ))
         ) : (
           <p style={{ padding: '1rem' }}>No movies found.</p>
